@@ -1,0 +1,84 @@
+@baseUrl = http://localhost:3000
+
+### RecadosControllerFindAll
+
+# @name RecadosControllerFindAll
+GET {{baseUrl}}/recados?
+&limit=10
+&offset=0
+
+
+### RecadosControllerFindOne
+
+# @name RecadosControllerFindOne
+GET {{baseUrl}}/recados/13
+
+### RecadosControllerCreate
+
+# @name RecadosControllerCreate
+POST {{baseUrl}}/recados
+Content-Type: application/json
+
+{
+    "texto": "4 NOVO Recado",
+    "deId": 11,
+    "paraId": 15
+}
+
+### RecadosControllerUpdate
+
+# @name RecadosControllerUpdate
+PATCH {{baseUrl}}/recados/13
+Content-Type: application/json
+
+{
+    "texto": "888 velho Recado"
+}
+
+### RecadosControllerDelete
+
+# @name RecadosControllerDelete
+DELETE {{baseUrl}}/recados/99
+
+
+
+### PessoasControllerFindAll
+
+# @name PessoasControllerFindAll
+GET {{baseUrl}}/pessoas?
+&limit=6
+&offset=0
+
+
+### PessoasControllerFindOne
+
+# @name PessoasControllerFindOne
+GET {{baseUrl}}/pessoas/11
+
+### PessoasControllerCreate
+
+# @name PessoasControllerCreate
+POST {{baseUrl}}/pessoas
+Content-Type: application/json
+
+{
+    "email": "teste4@gmail.com",
+    "password": "123456",
+    "nome": "teste"
+}
+
+### PessoasControllerUpdate
+
+# @name PessoasControllerUpdate
+PATCH {{baseUrl}}/pessoas/11
+Content-Type: application/json
+
+{
+    "password": "tetsa",
+    "nome": "teste"
+}
+
+### PessoasControllerDelete
+
+# @name PessoasControllerDelete
+DELETE {{baseUrl}}/pessoas/12
